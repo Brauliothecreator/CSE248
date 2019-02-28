@@ -10,7 +10,7 @@ public class NameWarehouse {
 	
 	public NameWarehouse() {
 		allNames();
-		nb.display();
+		//nb.display();
 		
 	}
 
@@ -92,7 +92,7 @@ public class NameWarehouse {
 	public void allNames() {
 		
 		nb  = new NameBag(5000);
-		for(int i = 0; i < 1500/2; i++) {
+		for(int i = 0; i < 3100/2; i++) {
 			nb.insert(new Name(loadBoysFirstName()[(int) (Math.random()*600)], loadLastName()[(int)(Math.random()*loadLastName().length)],'M'));
 			nb.insert(new Name(loadGirlsFirstName()[(int) (Math.random()*597)], loadLastName()[(int)(Math.random()*loadLastName().length)],'F'));
 		

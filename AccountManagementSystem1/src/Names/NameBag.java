@@ -3,6 +3,8 @@ package Names;
 import java.util.HashSet;
 import java.util.Iterator;
 
+import accounts.UserAccount;
+
 public class NameBag {
 	HashSet<Name> names;
 	
@@ -50,6 +52,12 @@ public class NameBag {
 	public void setNames(HashSet<Name> names) {
 		this.names = names;
 	}
+	public void getSize() {
+		System.out.println(names.size());
+	}
+
+
+	
 
 	
 
