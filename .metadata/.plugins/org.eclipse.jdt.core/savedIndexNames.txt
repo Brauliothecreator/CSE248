@@ -1,0 +1,6 @@
+INDEX VERSION 1.131+C:\Users\Braul\Dropbox\CSE248\.metadata\.plugins\org.eclipse.jdt.core
+3556266413.index
+2922376027.index
+2125729670.index
+4203505736.index
+3855385429.index

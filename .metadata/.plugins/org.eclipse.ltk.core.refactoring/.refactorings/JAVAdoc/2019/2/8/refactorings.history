@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;test_TemperatureConversion&apos; to &apos;temperature_Conversion&apos;&#x0D;&#x0A;- Original project: &apos;JAVAdoc&apos;&#x0D;&#x0A;- Original element: &apos;JAVAdoc/src/test_TemperatureConversion&apos;&#x0D;&#x0A;- Renamed element: &apos;JAVAdoc/src/temperature_Conversion&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;test_TemperatureConversion&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src&lt;test_TemperatureConversion" name="temperature_Conversion" qualified="false" references="true" stamp="1550588660631" textual="false" version="1.0"/>
+</session>
