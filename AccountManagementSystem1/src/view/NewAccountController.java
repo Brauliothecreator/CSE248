@@ -43,10 +43,12 @@ public class NewAccountController implements Initializable {
 	
 	
 	@FXML
-	public void addAccount(ActionEvent e) {
-		if(!LoginController.allUsers.UsernameExist(username.getText())) {
-			if(LoginController.allUsers.checkPassword(password.getText())) {
-				LoginController.allUsers.emitUserAccount(username.getText(),password.getText(),gender.getText().charAt(0), username.getText(),password.getText(),Double.parseDouble(gpa.getText()));
+	public void addAccount(ActionEvent e) throws StringIndexOutOfBoundsException{
+		if(!MainView.allUsers.UsernameExist(username.getText())) {
+			if(MainView.allUsers.validGender(gender.getText().charAt(0))) {
+				if(MainView.allUsers.validGpa(Double.parseDouble(gpa.getText()))) {
+				if(MainView.allUsers.checkPassword(password.getText())) {
+				MainView.allUsers.emitUserAccount(username.getText(),password.getText(),gender.getText().charAt(0), username.getText(),password.getText(),Double.parseDouble(gpa.getText()));
 				Parent root;
 				try {
 					root = FXMLLoader.load(getClass().getResource("Login.fxml"));
@@ -57,12 +59,21 @@ public class NewAccountController implements Initializable {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
 				}
-			}
+			
+				}else {
+					response.setText("Invalid Password");
+			
+					}
+				}else {
+					response.setText("Invalid Gpa");
+				}
+		}else {
+			response.setText("Invalid Gender Input");
+		}
+				
 		}else {
 			response.setText("User Name exist!");
-					}
-		
-		
+		}
 	}
 
 	@Override

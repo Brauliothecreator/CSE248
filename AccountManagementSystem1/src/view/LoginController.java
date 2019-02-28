@@ -27,8 +27,10 @@ public class LoginController implements Initializable {
 	private Button login;
 	@FXML
 	private Hyperlink newAccount;
+	@FXML 
+	private TextField updater;
 	
- static UserAccountFactory allUsers = new UserAccountFactory();
+ 
 	@FXML
 	public void makeNewAccount(ActionEvent e) {
 		Parent root;
@@ -45,16 +47,16 @@ public class LoginController implements Initializable {
 	@FXML
 	public void verifyUser(ActionEvent e) {
 		
-		if(allUsers.getAccountBag().UsernameExist(username.getText())) {
-			if(allUsers.getAccountBag().PasswordExist(password.getText())) {
-				System.out.println("Success");
+		if(MainView.allUsers.getAccountBag().UsernameExist(username.getText())) {
+			if(MainView.allUsers.getAccountBag().PasswordExist(password.getText())) {
+				updater.setText("Success");
 				
 			}
 			else {
-				System.out.println("Password is Incorrect");
+				updater.setText("Success");
 			}
 		}else {
-			System.out.println("Wtong Username");
+			updater.setText("Wrong Username");
 		}
 		
 		
@@ -62,8 +64,8 @@ public class LoginController implements Initializable {
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
-		allUsers.addPreMadeAccounts();
-		allUsers.getAccountBag().displayAccounts();
+	//	updater.setEditable(false);
+		MainView.allUsers.getAccountBag().displayAccounts();
 		
 	}
 

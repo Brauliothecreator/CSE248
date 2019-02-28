@@ -148,6 +148,20 @@ Iterator<UserAccount> it = accountBag.getAccounts().iterator();
 		
 		
 	}
+	public boolean validGpa(double gpa) {
+		if(gpa >=  0.0 && gpa <= 4.0) {
+			return true;
+		}
+		
+		return false;
+	}
+	public boolean validGender(char letter) {
+		if(letter == 'M' || letter == 'F' || letter == 'm' || letter == 'f') {
+			return true;
+		}
+		return false;
+		
+	}
 	public AccountBag getAccountBag() {
 		return accountBag;
 	}
