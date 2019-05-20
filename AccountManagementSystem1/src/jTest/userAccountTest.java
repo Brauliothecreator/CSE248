@@ -11,10 +11,12 @@ class userAccountTest {
 
 	@Test
 	void lowerCaseTest() {
-		UserAccountFactory userAccountFactory = new UserAccountFactory();
-		String password = "";
+		UserAccountFactory u = new UserAccountFactory();
+		String password = "cjhkdjhdi#H1";
 		
-		//assertTrue(userAccountFactory.hasLowerCase(password));
+		
+		
+		assertTrue(u.checkPassword(password));
 		
 	
 	}

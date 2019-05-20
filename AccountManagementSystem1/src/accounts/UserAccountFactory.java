@@ -26,6 +26,7 @@ public class UserAccountFactory {
 		n = it.next();
 		accountBag = new AccountBag();
 	}
+	
 	public void addPreMadeAccounts() {
 		for(int i =0; i < 3000; i++) {
 			emitUserAccount(emitFirstName(),emitLastName(), emitGender(),emitUserName(),emitUserPassword(), emitGpa());

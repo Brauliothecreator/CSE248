@@ -2,6 +2,7 @@ package view;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.Arrays;
 import java.util.ResourceBundle;
 
 import accounts.UserAccountFactory;
@@ -65,6 +66,7 @@ public class LoginController implements Initializable {
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 	//	updater.setEditable(false);
+		//Arrays.sort(MainView.allUsers.getAccountBag());
 		MainView.allUsers.getAccountBag().displayAccounts();
 		
 	}

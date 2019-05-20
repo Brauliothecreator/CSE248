@@ -5,7 +5,7 @@ import java.util.Iterator;
 
 import Names.Name;
 
-public class AccountBag implements Comparable{
+public class AccountBag {
 	private HashSet<UserAccount> accounts = new HashSet<UserAccount>(5000);
 	
 	public void displayAccounts() {
@@ -50,11 +50,8 @@ Iterator<UserAccount> it = accounts.iterator();
 		return false;
 		
 	}
-	@Override
-	public int compareTo(Object arg0) {
-		// TODO Auto-generated method stub
-		return 0;
-	}
+
+	
 	
 	
 
